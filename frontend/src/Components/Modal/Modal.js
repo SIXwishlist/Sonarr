@@ -112,6 +112,7 @@ class Modal extends Component {
   render() {
     const {
       className,
+      style,
       backdropClassName,
       size,
       children,
@@ -139,6 +140,7 @@ class Modal extends Component {
                       className,
                       styles[size]
                     )}
+                    style={style}
                   >
                     {children}
                   </div>
@@ -153,6 +155,7 @@ class Modal extends Component {
 
 Modal.propTypes = {
   className: PropTypes.string,
+  style: PropTypes.object,
   backdropClassName: PropTypes.string,
   size: PropTypes.oneOf(sizes.all),
   children: PropTypes.node,
